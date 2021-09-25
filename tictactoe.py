@@ -51,7 +51,7 @@ def player_marker_input():
     return (player1, player2)
     
 
-marker = 'X'
+
 
 
 def player_position_input():
@@ -68,16 +68,20 @@ def place_marker(board, marker, position):
 
 def win_check(board,mark):
     return ((board[1] == board[2] == board[3] == mark) or 
-    (board[4] == board[5] == board[6] == marker) or
-    (board[7] == board[8] == board[9] == marker) or
-    (board[1] == board[4] == board[7] == marker) or
-    (board[2] == board[5] == board[8] == marker) or
-    (board[3] == board[6] == board[9] == marker) or
-    (board[1] == board[5] == board[9] == marker) or
-    (board[7] == board[5] == board[3] == marker))
+    (board[4] == board[5] == board[6] == mark) or
+    (board[7] == board[8] == board[9] == mark) or
+    (board[1] == board[4] == board[7] == mark) or
+    (board[2] == board[5] == board[8] == mark) or
+    (board[3] == board[6] == board[9] == mark) or
+    (board[1] == board[5] == board[9] == mark) or
+    (board[7] == board[5] == board[3] == mark))
 
 
 
 #player1_marker, player2_marker = player_marker_input()
 
-choose_first()
+def replay():
+    choice = input("Do you want to play again? (Y/N) ")
+    return choice == 'Yes'
+
+replay()
